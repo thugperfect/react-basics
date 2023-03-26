@@ -1,3 +1,4 @@
+import Sidenav from "./Sidenav"
 function body(){
     let html = document.querySelector("#html")
     let htm = document.getElementById("html")
@@ -19,13 +20,99 @@ function body(){
 function Contentsnav(){
     return(
         <div id="nav2" >
-            <div className="navbtn" onClick={()=> this.body()} id="html">HTML</div>
-            <div className="navbtn" id="css">CSS</div>
-            <div className="navbtn" id="js">JS</div>
-            <div className="navbtn"  id="node">NODE</div>
+            <div className="navbtn" onClick={html} id="html">HTML</div>
+            <div className="navbtn" onClick={css}  id="css">CSS</div>
+            <div className="navbtn" onClick={js} id="js">JS</div>
+            <div className="navbtn" onClick={node} id="node">NODE</div>
         </div>
 
     );
 }
+
+const html = () => {
+    var mbox= document.getElementById("mbox")
+
+    var htmlcont = `The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It is often assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.<br><br>
+    In 1980, physicist Tim Berners-Lee, a contractor at CERN, proposed and prototyped ENQUIRE, a system for CERN researchers to use and share documents. In 1989, Berners-Lee wrote a memo proposing an Internet-based hypertext system.[3] Berners-Lee specified HTML and wrote the browser and server software in late 1990. That year, Berners-Lee and CERN data systems engineer Robert Cailliau collaborated on a joint request for funding, but the project was not formally adopted by CERN. In his personal notes of 1990, Berners-Lee listed "some of the many areas in which hypertext is used"; an encyclopedia is the first entry.[4]<br><br>
+
+The first publicly available description of HTML was a document called "HTML Tags",[5] first mentioned on the Internet by Tim Berners-Lee in late 1991.[6][7] It describes 18 elements comprising the initial, relatively simple design of HTML. Except for the hyperlink tag, these were strongly influenced by SGMLguid, an in-house Standard Generalized Markup Language (SGML)-based documentation format at CERN. Eleven of these elements still exist in HTML 4.[8]
+
+HTML is a markup language that web browsers use to interpret and compose text, images, and other material into visible or audible web pages.<br><br> Default characteristics for every item of HTML markup are defined in the browser, and these characteristics can be altered or enhanced by the web page designer's additional use of CSS. Many of the text elements are mentioned in the 1988 ISO technical report TR 9537 Techniques for using SGML, which describes the features of early text formatting languages such as that used by the RUNOFF command developed in the early 1960s for the CTSS (Compatible Time-Sharing System) operating system. These formatting commands were derived from the commands used by typesetters to manually format documents. However, the SGML concept of generalized markup is based on elements (nested annotated ranges with attributes) rather than merely print effects, with separate structure and markup. HTML has been progressively moved in this direction with CSS.
+
+`
+var hh = document.getElementById("hh")
+
+hh.innerHTML="HTML"
+
+    
+
+    mbox.innerHTML=htmlcont
+}
+
+const css = () => {
+
+    var mbox= document.getElementById("mbox")
+    var csscont =  `Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML).[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]<br><br>
+
+CSS is designed to enable the separation of content and presentation, including layout, colors, and fonts.[3] This separation can improve content accessibility; provide more flexibility and control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.
+
+Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices.<br><br> CSS also has rules for alternate formatting if the content is accessed on a mobile device.[4]
+
+The name cascading comes from the specified priority scheme to determine which style rule applies if more than one rule matches a particular element. This cascading priority scheme is predictable.
+
+The CSS specifications are maintained by the World Wide Web Consortium (W3C). Internet media type (MIME type) text/css is registered for use with CSS by RFC 2318 (March 1998). The W3C operates a free CSS validation service for CSS documents.[5]
+
+In addition to HTML, other markup languages support the use of CSS including XHTML, plain XML, SVG, and XUL.`
+mbox.innerHTML = csscont;
+var hh = document.getElementById("hh")
+
+hh.innerHTML="CSS"
+
+
+}
+
+const js = () => {
+
+var jscont = `JavaScript (/ˈdʒɑːvəskrɪpt/), often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.<br><br>
+
+JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.[10] It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. <br><br>It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).
+
+The ECMAScript standard does not include any input/output (I/O), such as networking, storage, or graphics facilities. In practice, the web browser or other runtime system provides JavaScript APIs for I/O.
+
+JavaScript engines were originally used only in web browsers, but are now core components of some servers and a variety of applications. The most popular runtime system for this usage is Node.js.
+
+Although Java and JavaScript are similar in name, syntax, and respective standard libraries, the two languages are distinct and differ greatly in design.`
+var mbox= document.getElementById("mbox")
+
+var hh = document.getElementById("hh")
+
+hh.innerHTML="JAVA SCRIPT"
+
+
+mbox.innerHTML = jscont;
+}
+
+const node = () => {
+   const nodecont =  `Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser.<br><br>
+
+Node.js lets developers use JavaScript to write command line tools and for server-side scripting. The ability to run JavaScript code on the server is often used to generate dynamic web page content before the page is sent to the user's web browser. Consequently, Node.js represents a "JavaScript everywhere" paradigm,[6] unifying web-application development around a single programming language, as opposed to using different languages for the server- versus client-side programming.
+
+Node.js has an event-driven architecture capable of asynchronous I/O. These design choices aim to optimize throughput and scalability in web applications with many input/output operations, as well as for real-time Web applications (e.g., real-time communication programs and browser games).[7]
+
+The Node.js distributed development project was previously governed by the Node.js Foundation,[8] and has now merged with the JS Foundation to form the OpenJS Foundation.<br><br> OpenJS Foundation is facilitated by the Linux Foundation's Collaborative Projects program.[9]
+
+Corporate users of Node.js software include GoDaddy,[10] Groupon,[11] IBM,[12] LinkedIn,[13][14] Microsoft,[15][16] Netflix,[17] PayPal,[18][19] SAP,[20] Walmart,[21] Yahoo!,[22] and Amazon Web Services.[23]`
+
+
+var mbox= document.getElementById("mbox")
+mbox.innerHTML = nodecont;
+var hh = document.getElementById("hh")
+
+hh.innerHTML="NODE.JS"
+
+
+}
+
+
 
 export default Contentsnav

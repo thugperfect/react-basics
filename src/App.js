@@ -1,9 +1,9 @@
 
 import './App.css';
-import Hello from './components/Hello';
 import Navbar from './components/Navbar';
 import Contentsnav from './components/Contentsnav';
 import Classname from './components/class';
+import Sidenav from './components/Sidenav';
 
 function App() {
   return (
@@ -12,7 +12,8 @@ function App() {
     <div className="App">
       <Navbar />
       <Contentsnav />
-      <Classname />
+      <Sidenav />
+
 
     </div>
   );
