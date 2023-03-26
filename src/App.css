@@ -42,6 +42,7 @@ body{
   height: 85vh;
   background-color:black;
   flex: 3;
+
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
