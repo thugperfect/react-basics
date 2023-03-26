@@ -136,3 +136,8 @@ body{
 h1{
   color: aliceblue;
 }
+@media(max-width:800px){
+  #btns{
+    width: 90%;
+  }
+}
